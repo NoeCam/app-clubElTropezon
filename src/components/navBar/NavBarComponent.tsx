@@ -4,6 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
+import logo from "../../../public/logo.jpg";
+import Image from "next/image";
+
 // import {
 //   HomeIcon,
 //   HistoryIcon,
@@ -21,29 +24,34 @@ const links = [
 export const NavBarComponent = () => {
   const pathname = usePathname();
   return (
-    <header className="flex justify-end ">
-      <nav>
-        <ul>
+    <header className="flex  pb-3">
+      <Link href="/" className="flex-grow">
+        <Image
+          src={logo}
+          alt="logo"
+          className="h-[48px] w-[48px] md:h-[64px] md:w-[64px]"
+        />
+      </Link>
+      <nav className="flex flex-row justify-end">
           {links.map((link) => {
             // const LinkIcon = link.icon;
             return (
+              
               <Link
                 key={link.name}
                 href={link.href}
                 className={clsx(
-                  "h-[48px] grow rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2",
+                  "h-[48px] grow mx-2 text-sm font-medium hover:border-b-4 hover:border-blue-600 flex items-center justify-center",
                   {
-                    "bg-sky-100 text-blue-600": pathname === link.href,
+                    "border-b-4 border-blue-800": pathname === link.href,
                   }
                 )}
               >
                 {/* <LinkIcon className="w-6" /> */}
-                <p className="text-sm">{link.name}</p>
                 <p className="hidden md:block">{link.name}</p>
               </Link>
             );
           })}
-      </ul>
       </nav>
     </header>
   );

@@ -5,7 +5,7 @@ export const FooterComponent: React.FC = () => {
 
   return (
     <div>
-      <h1>Copyright © {year}</h1>
+      <h3>Copyright © {year}</h3>
     </div>
   );
 };
