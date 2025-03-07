@@ -21,7 +21,7 @@ export const NavBarComponent = () => {
             width={189}
             height={165}
           />
-          <h1 className="text-xl ml-3">Club El Tropezón</h1>
+          <h1 className="text-xl ml-3">Tropezón Fútbol Club</h1>
         </Link>
       </div>
 
