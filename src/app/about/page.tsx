@@ -1,4 +1,4 @@
-export const pageAbout = () => {
+export default function PageAbout() {
   return (
     <div>
       <p>page About</p>
@@ -9,6 +9,4 @@ export const pageAbout = () => {
       <p>Alquiler del club</p>
     </div>
   );
-};
-
-export default pageAbout;
+}

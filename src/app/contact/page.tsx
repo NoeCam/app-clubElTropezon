@@ -1,4 +1,4 @@
-export const pageContant = () => {
+export default function PageContant() {
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       En este sector se mostrará el contenido de la página de contacto: que
@@ -8,6 +8,4 @@ export const pageContant = () => {
       de las asociaciones, una foto del frente del club, etc.
     </div>
   );
-};
-
-export default pageContant;
+}

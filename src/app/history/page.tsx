@@ -1,4 +1,4 @@
-export const pageHistory = () => {
+export default function PageHistory() {
   return (
     <div>
       <h1>History</h1>
@@ -17,6 +17,4 @@ export const pageHistory = () => {
       </p>
     </div>
   );
-};
-
-export default pageHistory;
+}
